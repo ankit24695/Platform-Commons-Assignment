@@ -179,7 +179,7 @@ public class AdminServiceImpl implements AdminService{
 			
 			Optional<Admin> optadmin = adminDao.findById(opt.get().getUserId());
 			
-			if(!optadmin.isPresent()) throw new UnaothorizedUserException("You are not authorized to register a student");
+			if(!optadmin.isPresent()) throw new UnaothorizedUserException("You are not authorized to use this service");
 			
 			Optional<Course> optCourse = courseDao.findById(courseID);
 			
@@ -213,7 +213,7 @@ public class AdminServiceImpl implements AdminService{
 			
 			Optional<Admin> optadmin = adminDao.findById(opt.get().getUserId());
 			
-			if(!optadmin.isPresent()) throw new UnaothorizedUserException("You are not authorized to register a student");
+			if(!optadmin.isPresent()) throw new UnaothorizedUserException("You are not authorized to use this service");
 			
 			Optional<Student> optStudent = studentDao.findById(studentId);
 			
